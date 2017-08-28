@@ -1,12 +1,25 @@
+import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to the Game!");
 
-        GamePiece player1 = new GamePiece();
-        GamePiece player2 = new GamePiece();
+        GamePiece one = new GamePiece();
 
-        System.out.println(player2.getName());
+        one.setColor("green");
 
-        System.out.println(player1.move(5, 7));
+        one.setName("one");
+
+        System.out.println(one.getName());
+        System.out.println(one.getColor());
+
+        GamePiece two = new GamePiece();
+
+        two.freeze();
+
+        two.unfreeze();
+
+        two.move(5,6);
+
     }
 }
